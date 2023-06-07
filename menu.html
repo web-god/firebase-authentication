@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Grammatic.AI</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+    .header {
+      background-color: #1a73e8;
+      color: white;
+      padding: 20px;
+      font-size: 36px;
+    }
+    .content {
+      padding: 30px;
+    }
+    .welcome-text {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Welcome to Grammatic.AI</div>
+  <div class="content">
+    <p class="welcome-text" id="user-display-name"></p>
+    <p>Improve your writing with Grammatic.AI! Our AI-powered writing assistant helps you write more effectively and confidently.</p>
+  </div>
+
+  <script>
+    // Get the user's display name from localStorage
+    const userDisplayName = localStorage.getItem("userDisplayName");
+
+    // Set the content of the welcome text with the user's display name
+    document.getElementById("user-display-name").textContent = `Hello, ${userDisplayName}!`;
+  </script>
+</body>
+</html>
